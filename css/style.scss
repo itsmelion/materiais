@@ -1,0 +1,45 @@
+// #fixed-topbar{
+//   position: fixed;
+//   margin-bottom: 64px;
+// }
+#ui-view{
+  overflow: scroll;
+}
+md-card{
+  margin: 0;
+  width: 100%;
+  md-card-title{
+  padding: 15px 10px 15px 10px;
+  }
+  md-card-title-text{
+    > span.md-headline{
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: bold;
+      text-overflow: ellipsis;
+      white-space: pre-line;
+    }
+    > span.md-subhead{
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: light;
+      text-overflow: ellipsis;
+    }
+  }
+  md-card-icon-actions button{
+    margin: 0 !important;
+  }
+}
+.container{
+  position: relative;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.md-user-avatar{
+  img{padding: 5px;}
+}
+
+md-card-header.ebook{
+  background: rgb(40, 191, 161);
+}
