@@ -1,68 +1,46 @@
-<header class="hero" layout="column" layout-padding>
-  <div>
-    <h1>Hello! this is the Bautiful HERO phrase of this page!</h1>
-  </div>
-  <div>
-    <md-button class="md-raised md-accent">Hello World!</md-button>
+<header class="hero">
+  <div class="container" layout="column" layout-padding>
+    <div>
+      <h1>Hello! This is the Bautiful HERO phrase of this page!</h1>
+    </div>
+    <div>
+      <md-button class="md-raised">Hello World!</md-button>
+    </div>
   </div>
 </header>
 
-<!-- <div>
-  <md-toolbar class="md-tall md-accent" layout="row">
-      <div class="md-toolbar-tools">
-        <h2>
-          <span>Filtros</span>
-        </h2>
-      </div>
-      <div class="md-toolbar-tools">
-          <h2 class="md-title">Filter stuff here:</h2>
-          <div layout="row">
-            <md-input-container style="margin-right: 10px;">
-              <label>Categories</label>
-              <md-select ng-model="categories">
-                <md-option>opt Filter 1</md-option>
-              </md-select>
-            </md-input-container>
-            <md-input-container>
-              <label>Filter</label>
-              <md-select multiple  ng-model="Filter">
-                <md-optgroup label="Group1">
-                  <md-option>opt Filter 1</md-option>
-                </md-optgroup>
-                <md-optgroup label="Group2">
-                  <md-option>opt Filter 2</md-option>
-                </md-optgroup>
-              </md-select>
-            </md-input-container>
-          </div>
-      </div>
-    </md-toolbar>
-</div> -->
-
-<md-progress-circular md-mode="indeterminate"></md-progress-circular>
-<div class="container">
-<md-grid-list
-      md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="5"
-      md-row-height-gt-md="500px" md-row-height="500px"
-      md-gutter="16px" md-gutter-gt-sm="8px">
-  <md-grid-tile class="gray">
-    <md-card ng-include="'includes/material-card.template.html'"></md-card>
-  </md-grid-tile>
-  <md-grid-tile>
-    <md-card ng-include="'includes/material-card.template.html'"></md-card>
-  </md-grid-tile>
-  <md-grid-tile>
-    <md-card ng-include="'includes/material-card.template.html'"></md-card>
-  </md-grid-tile>
-  <md-grid-tile>
-    <md-card ng-include="'includes/material-card.template.html'"></md-card>
-  </md-grid-tile>
-  <md-grid-tile>
-    <md-card ng-include="'includes/material-card.template.html'"></md-card>
-  </md-grid-tile>
-  <md-grid-tile>
-    <md-card ng-include="'includes/material-card.template.html'"></md-card>
-  </md-grid-tile>
-</md-grid-list>
+<div id="shadow-util">
+  <div class="container">
+    <md-grid-list
+          md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="5"
+          md-row-height-gt-md="500px" md-row-height="500px"
+          md-gutter="16px" md-gutter-gt-sm="8px">
+      <md-grid-tile class="gray">
+        <md-card ng-include="'includes/material-card.template.html'"></md-card>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-card ng-include="'includes/material-card.template.html'"></md-card>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-card ng-include="'includes/material-card.template.html'"></md-card>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-card ng-include="'includes/material-card.template.html'"></md-card>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-card ng-include="'includes/material-card.template.html'"></md-card>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-card ng-include="'includes/material-card.template.html'"></md-card>
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+  <div flex layout="row" layout-padding>
+    <span flex></span>
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    <span flex></span>
+  </div>
 </div>
+
+
 <footer flex="initial" ng-include="'includes/footer.template.html'"></footer>

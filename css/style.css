@@ -1,6 +1,42 @@
 #ui-view {
   overflow-y: scroll; }
 
+body {
+  color: rgba(0, 0, 0, 0.54); }
+
+a {
+  color: #6CB6C7; }
+
+#fixed-topbar img {
+  height: 64px;
+  padding: 1rem 0;
+  opacity: .8;
+  transition: .2s ease-in-out; }
+
+#fixed-topbar img:hover {
+  opacity: 1;
+  padding: .8rem 0; }
+
+.hero {
+  background-color: #6CB6C7;
+  background-image: url("/img/hero.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+  height: 192px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 0rem;
+  text-transform: uppercase;
+  padding-top: 192px; }
+  .hero button {
+    margin: 0;
+    padding: .3rem 1.5rem; }
+
+#shadow-util {
+  box-shadow: -5px 0 4px #483b4b; }
+
 md-card {
   margin: 0;
   width: 100%; }
@@ -29,4 +65,5 @@ md-card {
   padding: 5px; }
 
 md-card-header.ebook {
-  background: #28bfa1; }
+  background: #28bfa1;
+  color: rgba(0, 0, 0, 0.38); }
