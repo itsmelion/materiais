@@ -1,9 +1,5 @@
-// #fixed-topbar{
-//   position: fixed;
-//   margin-bottom: 64px;
-// }
 #ui-view{
-  overflow: scroll;
+  overflow-y: scroll;
 }
 md-card{
   margin: 0;
