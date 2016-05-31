@@ -1,25 +1,19 @@
-<md-card-header class="ebook">
+<md-card-header class="{{ebook.classe}}">
   <md-card-avatar>
-    <img class="md-user-avatar" src="img/ebook.png">
+    <img class="md-user-avatar" src="img/{{ebook.classe}}.png">
   </md-card-avatar>
   <md-card-header-text>
-    <span class="md-title">Ebook</span>
-    <span class="md-subhead">Marketing & Sales</span>
+    <span class="md-title">{{ebook.titulo}}</span>
+    <span class="md-subhead">{{ebook.assunto}}</span>
   </md-card-header-text>
 </md-card-header>
-<img src="http://lorempixel.com/200/200/food" class="md-card-image" alt="image caption">
+<img src="{{ebook.imagem}}" class="md-card-image" alt="image caption">
 <md-card-title>
   <md-card-title-text>
-    <span class="md-headline">Card headline</span>
-    <span class="md-subhead">Card subheader</span>
+    <span class="md-headline">{{ebook.nome}}</span>
+    <span class="md-subhead">{{ebook.descricao}}</span>
   </md-card-title-text>
 </md-card-title>
 <md-card-actions layout="row" layout-align="start center">
-  <md-button class="md-raised md-accent">Shop now!</md-button>
-  <span flex="grow"></span>
-  <md-card-icon-actions>
-    <md-button class="md-icon-button" aria-label="icon">
-      <md-tooltip>Download eBook on GooglePlay</md-tooltip><md-icon class="material-icons">shop</md-icon>
-    </md-button>
-  </md-card-icon-actions>
+  <md-button class="md-raised md-accent" href="{{ebook.url}}">Baixe agora</md-button>
 </md-card-actions>

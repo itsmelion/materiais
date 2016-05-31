@@ -10,27 +10,12 @@
 </header>
 
 <div id="shadow-util">
-  <div class="container">
+  <div class="container" ng-controller="ebookCtrl">
     <md-grid-list
           md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="5"
-          md-row-height-gt-md="500px" md-row-height="500px"
+          md-row-height-gt-md="480px" md-row-height="480px"
           md-gutter="16px" md-gutter-gt-sm="8px">
-      <md-grid-tile class="gray">
-        <md-card ng-include="'includes/material-card.template.html'"></md-card>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-card ng-include="'includes/material-card.template.html'"></md-card>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-card ng-include="'includes/material-card.template.html'"></md-card>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-card ng-include="'includes/material-card.template.html'"></md-card>
-      </md-grid-tile>
-      <md-grid-tile>
-        <md-card ng-include="'includes/material-card.template.html'"></md-card>
-      </md-grid-tile>
-      <md-grid-tile>
+      <md-grid-tile ng-repeat="ebook in ebooks">
         <md-card ng-include="'includes/material-card.template.html'"></md-card>
       </md-grid-tile>
     </md-grid-list>
@@ -41,6 +26,4 @@
     <span flex></span>
   </div>
 </div>
-
-
 <footer flex="initial" ng-include="'includes/footer.template.html'"></footer>

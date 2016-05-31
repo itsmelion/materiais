@@ -1,5 +1,11 @@
+@import "reset.scss";
+@import "../node_modules/material-design-icons/iconfont/material-icons.scss";
+@import "../node_modules/angular-material/modules/scss/angular-material.scss";
+
 #ui-view{
   overflow-y: scroll;
+  height: 100%;
+  width: 100%;
 }
 body{
   color: rgba(0,0,0,.54);
@@ -40,6 +46,11 @@ a{
 md-card{
   margin: 0;
   width: 100%;
+  md-card-header{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
   md-card-title{
   padding: 15px 10px 15px 10px;
   }
@@ -58,8 +69,9 @@ md-card{
       text-overflow: ellipsis;
     }
   }
-  md-card-icon-actions button{
+  md-card-icon-actions a{
     margin: 0 !important;
+    min-width: 120px !important;
   }
 }
 .container{
@@ -74,5 +86,17 @@ md-card{
 
 md-card-header.ebook{
   background: rgb(40, 191, 161);
-  color: rgba(0,0,0,.38);
+  color: rgba(255,255,255,.8);
+}
+md-card-header.infografico{
+  background: rgb(212,150,77);
+  color: rgba(255,255,255,.8);
+}
+md-card-header.video{
+  background: rgb(212,81,77);
+  color: rgba(255,255,255,.8);
+}
+md-card-header.podcast{
+  background: rgb(77,171,212);
+  color: rgba(255,255,255,.8);
 }

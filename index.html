@@ -6,68 +6,22 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 <title>Página de Materiais Plug</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-status-bar-style" content="lightblue">
-<meta name="description" content="Framework of Stormcloud Church" />
-<meta name="keywords" content="Storm,framework,stormcloud,christhopher lion,church,design,technology,startup,comunicação" />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="en_UK">
-<meta property="og:locale:alternate" content="pt-BR" />
-<meta name="msapplication-TileImage" content="img/tile.png"/>
-<meta name="msapplication-TileColor" content="#3592CD"/>
-<link rel="icon" type="image/png" href="/speeddial-160px.png" />
-<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"><![endif]-->
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="icon" type="image/png" href="favicon-16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="favicon-48.png" sizes="48x48">
-<link rel="icon" type="image/png" href="favicon-64.png" sizes="64x64">
-<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128">
-<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="reply-to" content="lion@stormcloud.me">
-<meta name="author" content="Christhopher Lion">
-<meta name="fragment" content="!">
-<base href="/" />
-<meta property="fb:app_id" content="{{facebookAppId}}">
-<meta property="og:site_name" content="Lion's Overview | STORM" />
-<meta property="og:title" content="Lion's Overview | STORM" />
-<meta property="og:description" content="About the Lion, his skills and ocupations" />
-<meta property="og:url" content="lion.stormcloud.me" />
-<meta property="og:image" content="/img/brand/logo.png" />
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="800">
-<meta property="og:image:height" content="600">
-<meta property="og:video" content="{{video_url}}" />
-<meta property="og:video:type" content="application/x-shockwave-flash" />
-<meta property="og:video:width" content="400" />
-<meta property="og:video:height" content="300" />
-<meta property="og:audio" content="{{Audio_Url}}" />
-<meta property="og:audio:type" content="audio/mpeg" />
-<meta property="twitter:title" content="{{title}}" />
-<link rel='stylesheet' type='text/css' href='css/reset.css' />
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
 <link rel='stylesheet' type='text/css' href='css/style.css' />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 </head>
-<body ng-app="materialPage" ng-cloak>
-<div layout="column" layout-wrap layout-fill>
-  <nav flex="initial" ng-include="'includes/bar.template.html'"></nav>
-  <div id="ui-view" flex ng-view></div>
-</div>
+<body ng-app="materialPage" layout="column" layout-wrap layout-fill ng-cloak>
 
-<script src="node_modules/angular/angular.js"></script>
-<script src="node_modules/angular-route/angular-route.js"></script>
-<script src="node_modules/angular-animate/angular-animate.js"></script>
-<script src="node_modules/angular-aria/angular-aria.js"></script>
-<script src="node_modules/angular-material/angular-material.js"></script>
+<nav flex="initial" ng-include="'includes/bar.template.html'"></nav>
+<div flex id="ui-view" ng-view></div>
+<nav flex ng-controller="sidebarCtrl" ng-include="'includes/sidebar.template.html'"></nav>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<script src="/node_modules/angular-route/angular-route.js"></script>
+<script src="/node_modules/angular-animate/angular-animate.js"></script>
+<script src="/node_modules/angular-aria/angular-aria.js"></script>
+<script src="/node_modules/angular-material/angular-material.js"></script>
 <script type="text/javascript" src="js/application.js"></script>
 </body>
 </html>
