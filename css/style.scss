@@ -20,6 +20,14 @@ a{
   img:hover{opacity: 1; padding: .8rem 0;}
 }
 
+.md-sidenav-left{
+  md-toolbar button{
+    position: absolute;
+    bottom: -25px;
+    right: 10px;
+  }
+}
+
 .hero{
   background-color: #6CB6C7;
   background-image: url('/img/hero.jpg');
@@ -46,6 +54,7 @@ a{
 md-card{
   margin: 0;
   width: 100%;
+  md-card-avatar img{ width: 40px; height: 40px;}
   md-card-header{
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -97,6 +106,39 @@ md-card-header.video{
   color: rgba(255,255,255,.8);
 }
 md-card-header.podcast{
-  background: rgb(77,171,212);
+  background: rgb(151,65,186);
   color: rgba(255,255,255,.8);
+}
+
+.spaceguy{
+  img{
+    width: 100%;
+    min-width: 210px;
+    max-width: 500px;
+  }
+  article{
+    padding: 2rem;
+    h1{
+      font-size: 4rem;
+      font-weight: 900;
+      @media screen and (max-width: 600px){
+        font-size: 2.7rem;
+      }
+    }
+    h2{
+      font-size: 2.4rem;
+      @media screen and (max-width: 600px){
+        font-size: 1.8rem;
+      }
+    }
+    h5{
+      color: rgb(212,81,77);
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-top: 1rem;
+      @media screen and (max-width: 600px){
+        font-size: 1rem;
+      }
+    }
+  }
 }

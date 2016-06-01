@@ -1,6 +1,6 @@
 <md-toolbar id="fixed-topbar" class="md-whiteframe-2dp">
   <div class="md-toolbar-tools">
-    <md-button class="md-icon-button">
+    <md-button class="md-icon-button" ng-controller="sidebarCtrl" ng-click="toggleRight()">
       <md-icon class="material-icons">menu</md-icon>
     </md-button>
       <a href="http://plugcrm.net/"><img src="img/plug-logo.svg" /></a>
@@ -24,3 +24,20 @@
     </div>
   </div>
 </md-toolbar>
+<div ng-controller="sidebarCtrl">
+  <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="right" layout="column">
+    <md-toolbar flex="noshrink" class="md-theme-light">
+      <h1 class="md-toolbar-tools">Página de Materiais</h1>
+      <md-button ng-click="close()" class="md-warn md-fab md-mini"><md-icon class="material-icons">close</md-icon></md-button>
+    </md-toolbar>
+    <md-content  flex="grow" layout="column" layout-padding>
+      <md-button href="http://plucrm.net/">Portal</md-button>
+      <md-button href="http://blog.plucrm.net/">Blog</md-button>
+      <md-button href="http://arquivo.plucrm.net/">Materiais</md-button>
+      <md-button href="http://plucrm.net/app">App CRM</md-button>
+    </md-content>
+    <md-toolbar flex="noshrink" class="md-theme-light">
+      <h1 class="md-toolbar-tools">PlugCRM</h1>
+    </md-toolbar>
+  </md-sidenav>
+</div>

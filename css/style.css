@@ -12134,6 +12134,11 @@ a {
   opacity: 1;
   padding: .8rem 0; }
 
+.md-sidenav-left md-toolbar button, md-sidenav md-toolbar button {
+  position: absolute;
+  bottom: -25px;
+  right: 10px; }
+
 .hero {
   background-color: #6CB6C7;
   background-image: url("/img/hero.jpg");
@@ -12157,6 +12162,9 @@ a {
 md-card {
   margin: 0;
   width: 100%; }
+  md-card md-card-avatar img {
+    width: 40px;
+    height: 40px; }
   md-card md-card-header {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -12199,5 +12207,32 @@ md-card-header.video {
   color: rgba(255, 255, 255, 0.8); }
 
 md-card-header.podcast {
-  background: #4dabd4;
+  background: #9741ba;
   color: rgba(255, 255, 255, 0.8); }
+
+.spaceguy img {
+  width: 100%;
+  min-width: 210px;
+  max-width: 500px; }
+
+.spaceguy article {
+  padding: 2rem; }
+  .spaceguy article h1 {
+    font-size: 4rem;
+    font-weight: 900; }
+    @media screen and (max-width: 600px) {
+      .spaceguy article h1 {
+        font-size: 2.7rem; } }
+  .spaceguy article h2 {
+    font-size: 2.4rem; }
+    @media screen and (max-width: 600px) {
+      .spaceguy article h2 {
+        font-size: 1.8rem; } }
+  .spaceguy article h5 {
+    color: #d4514d;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 1rem; }
+    @media screen and (max-width: 600px) {
+      .spaceguy article h5 {
+        font-size: 1rem; } }

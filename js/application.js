@@ -3,7 +3,8 @@ var app = angular.module('materialPage', ['ngMaterial', 'ngRoute', 'firebase']);
 app.config(['$routeProvider', function ($routeProvider) {
 $routeProvider
 .when("/", {templateUrl: "includes/inicio.html", controller: "PageCtrl"})
-.otherwise("/404", {templateUrl: "includes/404.html", controller: "PageCtrl"});
+.when("/404", {templateUrl: "includes/404.html", controller: "PageCtrl"})
+.otherwise({redirectTo:"/404"});
 }]);
 
 app.config(function($mdThemingProvider) {
@@ -14,7 +15,7 @@ var ctaTeal = $mdThemingProvider.extendPalette('teal', {
 });
 $mdThemingProvider.definePalette('plugTeal', ctaTeal);
 $mdThemingProvider.theme('default')
-  .primaryPalette('purple')
+  .primaryPalette('blue-grey')
   .accentPalette('plugTeal')
 });
 
@@ -30,47 +31,23 @@ app.controller("ebookCtrl", function($scope, $firebaseArray) {
    $scope.ebooks = $firebaseArray(ref);
 });
 
-app.controller('sidebarCtrl', function ($scope, $timeout, $mdSidenav, $location, $http) {
+app.controller('sidebarCtrl', function ($scope, $mdSidenav) {
     $scope.toggleRight = buildToggler('right');
     $scope.isOpenRight = function(){
       return $mdSidenav('right').isOpen();
     };
-    /**
-     * Supplies a function that will continue to operate until the
-     * time is up.
-     */
-    function debounce(func, wait, context) {
-      var timer;
-      return function debounced() {
-        var context = $scope,
-            args = Array.prototype.slice.call(arguments);
-        $timeout.cancel(timer);
-        timer = $timeout(function() {
-          timer = undefined;
-          func.apply(context, args);
-        }, wait || 10);
-      };
-    }
     function buildToggler(navID) {
       return function() {
         // Component lookup should always be available since we are not using `ng-if`
         $mdSidenav(navID)
           .toggle()
-          .then(function () {
-            $log.debug("toggle " + navID + " is done");
-          });
       }
     }
-  });
-  app.controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.close = function () {
       // Component lookup should always be available since we are not using `ng-if`
       $mdSidenav('right').close()
-        .then(function () {
-          $log.debug("close RIGHT is done");
-        });
     };
-  });
+});
 
   app.controller('PageCtrl', function ($scope, $location, $http) {
   });
